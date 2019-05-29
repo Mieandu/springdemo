@@ -7,7 +7,7 @@ import com.mieandu.service.UserService;
  * @version 1.0
  * @date 2019/5/15 10:03
  */
-public class UserServiceImpl implements UserService {
+public class UserServiceImpl extends UserService {
     public String getAccount() {
         return "Zzz";
     }
