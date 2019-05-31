@@ -1,6 +1,7 @@
 package com.mieandu.context;
 
 import com.mieandu.pojo.MyFactoryBean;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -11,9 +12,12 @@ import org.springframework.context.annotation.Configuration;
  */
 @Configuration
 public class ContextCofiguration {
+    @Value("${addr}")
+    String address;
 
     @Bean
     public MyFactoryBean myFactoryBean(){
+        System.out.println("address：" + address);
         return new MyFactoryBean();
     }
 }
