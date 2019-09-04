@@ -7,6 +7,8 @@ import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.BeanNameAware;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.config.BeanPostProcessor;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.PostConstruct;
 
@@ -15,9 +17,11 @@ import javax.annotation.PostConstruct;
  * @version 1.0
  * @date 2019/5/15 10:03
  */
+@Service
 public class UserServiceImpl implements UserService,InitializingBean,BeanNameAware {
 
     private static final Logger logger = LoggerFactory.getLogger(UserServiceImpl.class);
+
     @Override
     public String getAccount() {
         return "Zzz";

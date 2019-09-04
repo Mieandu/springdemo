@@ -1,5 +1,6 @@
 package com.mieandu.controller;
 
+import com.mieandu.service.OrderService;
 import com.mieandu.service.UserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -22,6 +23,9 @@ public class TestController {
     private static final Logger logger = LoggerFactory.getLogger(TestController.class);
     @Autowired
     private UserService userService;
+    @Autowired
+    private OrderService orderService;
+
     @RequestMapping(value = "first")
     @ResponseBody
     public String test(@RequestParam(value = "itemCodes",required = false) String itemCodes, String zxvf){
